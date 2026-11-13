@@ -1,37 +1,24 @@
-
-<template>
-  <div class="homepage">
-    <v-progress-circular
-      indeterminate
-      color="success"
-      size="40"
-      width="4"
-    />
-    <p>Redirecting to SNC SkillBridge...</p>
-  </div>
-</template>
-
 <script setup lang="ts">
+// Automatically redirect the homepage to the login page
 await navigateTo('/login', {
   replace: true
 })
 </script>
 
+<template>
+  <div class="redirect-page">
+    <p>Redirecting to SNC SkillBridge...</p>
+  </div>
+</template>
+
 <style scoped>
-.homepage {
+.redirect-page {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 16px;
-  background: #f5f3ff;
-  color: #087b45;
+  justify-content: center;
+  background: #f5f7f5;
+  color: #087443;
   font-family: Arial, sans-serif;
-}
-
-.homepage p {
-  font-size: 14px;
-  font-weight: 500;
 }
 </style>
