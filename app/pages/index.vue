@@ -12,16 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-
-definePageMeta({
-  layout: false
-})
-
-onMounted(() => {
-  navigateTo('/login', {
-    replace: true
-  })
+await navigateTo('/login', {
+  replace: true
 })
 </script>
 
